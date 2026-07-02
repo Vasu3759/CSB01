@@ -188,7 +188,7 @@ export default function FreeConsultationPage() {
   const [selectedPlans, setSelectedPlans] = useState([])
   const [selectedServices, setSelectedServices] = useState([])
   const [showNegotiationModal, setShowNegotiationModal] = useState(false)
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" })
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", optIn: false })
   const [submitted, setSubmitted] = useState(false)
 
   const togglePlan = (id) => {
@@ -255,7 +255,7 @@ export default function FreeConsultationPage() {
     setTimeout(() => {
       setShowNegotiationModal(false);
       setSubmitted(false);
-      setForm({ name: "", email: "", phone: "", message: "" });
+      setForm({ name: "", email: "", phone: "", message: "", optIn: false });
     }, 2000);
   }
 
@@ -592,6 +592,38 @@ export default function FreeConsultationPage() {
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-400"
                   rows={3}
                 />
+
+                <div className="mt-6 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">Stay in the loop!</h3>
+                  <p className="text-gray-600 mb-3 text-sm">
+                    Check the box below if you'd like to receive updates, offers, and helpful information from us.
+                  </p>
+                  
+                  <div className="border border-gray-200 rounded-lg p-4 flex items-start space-x-3 bg-gray-50/50">
+                    <div className="flex-shrink-0 mt-0.5">
+                      <input
+                        type="checkbox"
+                        id="modalOptIn"
+                        name="optIn"
+                        checked={form.optIn}
+                        onChange={(e) => setForm({ ...form, optIn: e.target.checked })}
+                        className="w-5 h-5 rounded border-gray-300 text-red-500 focus:ring-red-500 cursor-pointer"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="modalOptIn" className="text-gray-800 text-sm font-medium leading-relaxed block mb-1 cursor-pointer">
+                        Yes, I agree to receive messages from Chalksnboard via RCS messages, SMS, and other electronic communications.
+                      </label>
+                      <p className="text-gray-500 text-xs leading-relaxed">
+                        Message and data rates may apply. You can opt out at any time by replying STOP.{" "}
+                        <a href="/privacy-policy" className="text-blue-600 hover:text-blue-700 hover:underline">
+                          Privacy Policy
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 rounded-lg font-bold text-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200"

@@ -10,7 +10,8 @@ export default function ContactUsPage() {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
+    optIn: false
   })
   const [submitted, setSubmitted] = useState(false)
 
@@ -39,7 +40,7 @@ export default function ContactUsPage() {
     // Reset form after 2 seconds
     setTimeout(() => {
       setSubmitted(false)
-      setForm({ name: "", email: "", phone: "", subject: "", message: "" })
+      setForm({ name: "", email: "", phone: "", subject: "", message: "", optIn: false })
     }, 2000)
   }
 
@@ -169,6 +170,37 @@ export default function ContactUsPage() {
                     placeholder="Tell us about your project or inquiry..."
                     required
                   />
+                </div>
+
+                <div className="mt-6 mb-6">
+                  <h3 className="text-xl font-bold text-white mb-2">Stay in the loop!</h3>
+                  <p className="text-white/80 mb-4 text-sm">
+                    Check the box below if you'd like to receive updates, offers, and helpful information from us.
+                  </p>
+                  
+                  <div className="bg-white/5 border border-white/20 rounded-lg p-5 flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-0.5">
+                      <input
+                        type="checkbox"
+                        id="optIn"
+                        name="optIn"
+                        checked={form.optIn}
+                        onChange={(e) => setForm({ ...form, optIn: e.target.checked })}
+                        className="w-5 h-5 rounded border-white/30 text-red-500 focus:ring-red-500 focus:ring-offset-slate-900 bg-white/10 cursor-pointer"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="optIn" className="text-white/90 text-sm font-medium leading-relaxed block mb-2 cursor-pointer">
+                        Yes, I agree to receive messages from Chalksnboard via RCS messages, SMS, and other electronic communications.
+                      </label>
+                      <p className="text-white/60 text-xs leading-relaxed">
+                        Message and data rates may apply. You can opt out at any time by replying STOP.{" "}
+                        <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300 hover:underline">
+                          Privacy Policy
+                        </a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <button

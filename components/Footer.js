@@ -31,6 +31,16 @@ export default function Footer() {
     window.open(urls[platform], "_blank")
   }
 
+  const openPage = (page) => {
+    if (page === "Privacy Policy") {
+      router.push("/privacy-policy")
+    } else if (page === "Terms of Service") {
+      router.push("/terms-and-conditions")
+    } else {
+      alert(`Opening ${page} page...`)
+    }
+  }
+
   return (
     <>
       {/* AI Bot Component */}
