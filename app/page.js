@@ -12,7 +12,7 @@ const ComprehensiveServicesSection = dynamic(() => import("../components/Compreh
 const MediaServicesSection = dynamic(() => import("../components/MediaServicesSection"))
 const WorkflowSection = dynamic(() => import("../components/WorkflowSection"))
 const MagazineStatsSection = dynamic(() => import("../components/MagazineStatsSection"))
-const WhyChalksnboardSection = dynamic(() => import("../components/WhyChalksnboardSection"))
+
 const ServiceCardsSection = dynamic(() => import("../components/ServiceCardsSection"))
 const CTASection = dynamic(() => import("../components/CTASection"))
 const AdditionalServiceCardsSection = dynamic(() => import("../components/AdditionalServiceCardsSection"))
@@ -80,7 +80,6 @@ export default function ChalksnboardClone() {
       
       <VantaCloudsBackground>
         <PortfolioSection />
-        <WhyChalksnboardSection />
       </VantaCloudsBackground>
       <ReviewSection />
       

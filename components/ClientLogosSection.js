@@ -22,106 +22,98 @@ const clients = [
 ];
 
 export default function ClientLogosSection() {
-  const numberOfClients = clients.length;
-  // Calculate the radius based on card width to ensure they don't overlap perfectly
-  // Using ~200px width per card
-  const radius = Math.round((220 * numberOfClients) / (2 * Math.PI));
+  // Split clients into two rows
+  const row1 = clients.slice(0, 8);
+  const row2 = clients.slice(8, 16);
+
+  // Duplicate items to ensure a seamless infinite scrolling loop
+  const dupRow1 = [...row1, ...row1, ...row1];
+  const dupRow2 = [...row2, ...row2, ...row2];
 
   return (
-    <section className="bg-background py-16 md:py-32 relative overflow-hidden border-t border-border/50">
+    <section className="bg-background py-16 md:py-24 relative overflow-hidden border-t border-border/10">
       
-      {/* ======================= */}
-      {/* THE SUN & LIGHT RAYS    */}
-      {/* ======================= */}
-      
-      {/* Core Sun bright spot behind the text */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-white/10 rounded-full blur-[80px] pointer-events-none z-0" />
-      
-      {/* Massive ambient primary glow casting down */}
-      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] md:w-[1200px] h-[800px] bg-primary/10 rounded-full blur-[150px] pointer-events-none z-0" />
+      {/* Background Atmosphere */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
-      {/* Light cone/rays simulating light pouring down over the carousel */}
-      <div 
-        className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-[60px] pointer-events-none z-0"
-        style={{ clipPath: "polygon(20% 0, 80% 0, 100% 100%, 0% 100%)" }}
-      />
-
-
-      {/* Header text acting as the source of the sun */}
-      <div className="container mx-auto px-4 relative z-10 mb-16 mt-8">
-        <div className="text-center relative">
-          <span className="text-muted-foreground font-semibold tracking-widest uppercase text-sm mb-4 block">
-            The Network
+      <div className="container mx-auto px-4 lg:px-6 relative z-10 mb-12">
+        <div className="text-center">
+          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block animate-pulse">
+            Our Partnerships
           </span>
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-4 drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]">
-            Our <span className="text-primary drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">Esteemed Clients</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-6">
+            Our <span className="text-red-600 italic">Esteemed</span> Clients
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-            Partnering with forward-thinking institutions to redefine their digital footprint.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">
+            We collaborate with leading institutions and visionary brands to craft digital experiences that drive growth and engagement.
           </p>
         </div>
       </div>
 
-      {/* 3D Rotating Carousel Area */}
-      <div className="w-full h-[450px] md:h-[500px] flex items-center justify-center relative perspective-[1200px] overflow-hidden z-10">
+      {/* Dual Infinite Marquee Container */}
+      <div className="relative flex flex-col gap-6 overflow-hidden group">
         
-        {/* Edge Overlays to fade out the sides */}
-        <div className="absolute top-0 left-0 w-32 md:w-64 h-full bg-gradient-to-r from-background to-transparent z-40 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-32 md:w-64 h-full bg-gradient-to-l from-background to-transparent z-40 pointer-events-none" />
+        {/* Subtle Edge Gradients to blend into background */}
+        <div className="absolute top-0 left-0 w-32 md:w-64 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-32 md:w-64 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-        {/* The 3D Spinner */}
-        {/* Tilt it slightly forward (-5deg to -10deg) for a massive 3D depth effect */}
-        <div 
-          className="relative w-[180px] h-[120px] md:w-[220px] md:h-[140px] preserve-3d animate-carousel-spin hover:[animation-play-state:paused]"
-          style={{ transformStyle: "preserve-3d" }}
-        >
-          {clients.map((client, index) => {
-            const angle = (index / numberOfClients) * 360;
-            return (
-              <div 
-                key={client.id}
-                className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-card/80 backdrop-blur-md border border-border/80 rounded-2xl p-4 shadow-2xl transition-colors duration-300 hover:border-primary/50 group cursor-crosshair backface-hidden"
-                style={{
-                  transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
-                  backfaceVisibility: "hidden",
-                }}
-              >
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={client.image}
-                    alt={client.name}
-                    width={160}
-                    height={90}
-                    // Full color, full opacity
-                    className="object-contain w-full h-full transform group-hover:scale-110 transition-transform duration-500"
-                    draggable={false}
-                  />
-                </div>
-                
-                {/* Tooltip on hover */}
-                <div className="absolute -bottom-14 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs font-semibold px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none w-max max-w-[200px] text-center shadow-xl transform -translate-y-2 group-hover:translate-y-0 z-50">
-                  {client.name}
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 border-solid border-b-slate-900 border-b-4 border-x-transparent border-x-4 border-t-0" />
-                </div>
+        {/* Row 1: Scrolling Left */}
+        <div className="py-2 animate-marquee whitespace-nowrap flex items-center w-max group-hover:[animation-play-state:paused]">
+          {dupRow1.map((client, index) => (
+            <div 
+              key={`row1-${client.id}-${index}`}
+              className="mx-3 md:mx-4 w-40 md:w-56 h-24 md:h-32 bg-card rounded-2xl border border-border/50 flex items-center justify-center p-4 cursor-pointer transform hover:-translate-y-2 hover:shadow-md transition-all duration-300 group/card"
+              title={client.name}
+            >
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={client.image}
+                  alt={client.name}
+                  fill
+                  className="object-contain group-hover/card:scale-105 transition-transform duration-300"
+                  draggable={false}
+                />
               </div>
-            );
-          })}
+            </div>
+          ))}
+        </div>
+
+        {/* Row 2: Scrolling Right */}
+        <div className="py-2 animate-marquee-reverse whitespace-nowrap flex items-center w-max group-hover:[animation-play-state:paused]">
+          {dupRow2.map((client, index) => (
+            <div 
+              key={`row2-${client.id}-${index}`}
+              className="mx-3 md:mx-4 w-40 md:w-56 h-24 md:h-32 bg-card rounded-2xl border border-border/50 flex items-center justify-center p-4 cursor-pointer transform hover:-translate-y-2 hover:shadow-md transition-all duration-300 group/card"
+              title={client.name}
+            >
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={client.image}
+                  alt={client.name}
+                  fill
+                  className="object-contain group-hover/card:scale-105 transition-transform duration-300"
+                  draggable={false}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{__html: `
-        @keyframes carousel-spin {
-          from { transform: rotateX(-5deg) rotateY(0deg); }
-          to { transform: rotateX(-5deg) rotateY(360deg); }
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-33.33333%); }
         }
-        .animate-carousel-spin {
-          animation: carousel-spin 40s linear infinite;
+        @keyframes marquee-reverse {
+          0% { transform: translateX(-33.33333%); }
+          100% { transform: translateX(0%); }
         }
-        .preserve-3d {
-          transform-style: preserve-3d;
+        .animate-marquee {
+          animation: marquee 30s linear infinite;
         }
-        .backface-hidden {
-          backface-visibility: hidden;
+        .animate-marquee-reverse {
+          animation: marquee-reverse 30s linear infinite;
         }
       `}} />
     </section>

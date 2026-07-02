@@ -19,8 +19,7 @@ export default function HeroSection() {
       .from(".hero-title", { y: 30, opacity: 0, duration: 0.8 }, "-=0.4")
       .from(".hero-subtitle", { y: 20, opacity: 0, duration: 0.6 }, "-=0.6")
       .from(".hero-text", { y: 20, opacity: 0, duration: 0.6 }, "-=0.4")
-      .from(".hero-buttons", { y: 20, opacity: 0, duration: 0.6 }, "-=0.4")
-      .from(".hero-socials a", { y: 20, opacity: 0, stagger: 0.1, duration: 0.5 }, "-=0.2");
+      .from(".hero-buttons", { y: 20, opacity: 0, duration: 0.6 }, "-=0.4");
   }, { scope: containerRef });
 
   return (
@@ -103,7 +102,7 @@ export default function HeroSection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 sm:p-3 rounded-full hover:bg-primary text-muted-foreground hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-translate-y-1 border border-transparent hover:border-primary shadow-sm"
+                  className="p-2 sm:p-3 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-[0_0_10px_rgba(239,68,68,0.15)] hover:shadow-[0_0_20px_rgba(239,68,68,0.4)]"
                 >
                   <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>

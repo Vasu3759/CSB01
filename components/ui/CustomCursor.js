@@ -6,10 +6,14 @@ import { motion } from "framer-motion";
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     // Check if device supports hover (ignores mobile touch screens)
     if (window.matchMedia("(pointer: coarse)").matches) {
+      setIsMobile(true);
       return;
     }
 
@@ -38,8 +42,8 @@ export default function CustomCursor() {
     };
   }, []);
 
-  // Hide on mobile devices
-  if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) {
+  // Hide on mobile devices or before mounting
+  if (!isMounted || isMobile) {
     return null;
   }
 
