@@ -47,7 +47,7 @@ const servicesData = [
     title: "Email Marketing",
     description: "Reach your audience directly with personalized email campaigns designed to nurture leads, increase conversions, and retain customers.",
     icon: <Mail className="w-12 h-12" />,
-    color: "from-blue-500 to-cyan-700",
+    color: "from-zinc-500 to-cyan-700",
     features: ["Campaign Strategy", "Personalized Emails", "Automation", "A/B Testing", "Analytics & Reporting", "List Management"],
   },
   {
@@ -84,10 +84,10 @@ export default function ServiceDetail() {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
+      <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
-          <MagneticButton onClick={() => router.push('/services')} className="bg-red-600 text-white px-6 py-2 rounded-full mx-auto flex items-center">
+          <MagneticButton onClick={() => router.push('/services')} className="bg-primary/90 text-foreground px-6 py-2 rounded-full mx-auto flex items-center">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Services
           </MagneticButton>
         </div>
@@ -96,15 +96,15 @@ export default function ServiceDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white pt-32 pb-20">
+    <div className="min-h-screen bg-background text-foreground pt-32 pb-20">
       <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
         
         {/* Back Button */}
         <button 
           onClick={() => router.push('/services')}
-          className="flex items-center text-slate-400 hover:text-white transition-colors mb-12 group"
+          className="flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12 group"
         >
-          <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center mr-3 group-hover:bg-red-500 transition-colors">
+          <div className="w-8 h-8 rounded-full bg-card flex items-center justify-center mr-3 group-hover:bg-primary transition-colors">
             <ArrowLeft className="w-4 h-4" />
           </div>
           Back to all services
@@ -117,16 +117,16 @@ export default function ServiceDetail() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} mb-8 shadow-lg shadow-red-500/20`}>
+            <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} mb-8 shadow-lg shadow-primary/20`}>
               {service.icon}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
               {service.title}
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
               {service.description}
             </p>
-            <MagneticButton onClick={() => window.location.href='/#contact'} className="bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-red-500/30">
+            <MagneticButton onClick={() => window.location.href='/#contact'} className="bg-primary text-foreground px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/30">
               Get Started
             </MagneticButton>
           </motion.div>
@@ -137,10 +137,10 @@ export default function ServiceDetail() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-slate-800 to-slate-800/20 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
-            <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700 p-8 md:p-12 rounded-3xl shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-800 to-zinc-800/20 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
+            <div className="bg-card/50 backdrop-blur-xl border border-border p-8 md:p-12 rounded-3xl shadow-2xl">
               <h3 className="text-2xl font-bold mb-8 flex items-center">
-                <span className="w-2 h-8 bg-red-500 rounded-full mr-4"></span>
+                <span className="w-2 h-8 bg-primary rounded-full mr-4"></span>
                 Key Features Included
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -150,9 +150,9 @@ export default function ServiceDetail() {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4 + (i * 0.1) }}
-                    className="flex items-start text-slate-300"
+                    className="flex items-start text-muted-foreground"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-red-500 mr-3 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-primary mr-3 shrink-0 mt-0.5" />
                     <span className="font-medium">{feature}</span>
                   </motion.li>
                 ))}

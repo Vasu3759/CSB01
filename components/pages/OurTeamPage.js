@@ -58,7 +58,7 @@ export default function OurTeamPage() {
     {
       name: "Development Team",
       icon: TrendingUp,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-zinc-500 to-cyan-500",
       members: 12,
       description: "Full-stack developers and technical experts building digital solutions.",
       specialties: ["Web Development", "Mobile Apps", "E-commerce", "Technical SEO"],
@@ -89,7 +89,7 @@ export default function OurTeamPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-900">
       <Header />
 
       {/* Hero Section */}
@@ -174,7 +174,7 @@ export default function OurTeamPage() {
                 <div className="flex justify-center space-x-4">
                   <a
                     href={leader.social.linkedin}
-                    className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    className="w-10 h-10 bg-zinc-600 rounded-full flex items-center justify-center hover:bg-zinc-700 transition-colors"
                   >
                     <Linkedin className="w-5 h-5 text-white" />
                   </a>

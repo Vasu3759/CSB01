@@ -56,7 +56,7 @@ export default function Footer() {
       >
         <FaWhatsapp className="w-7 h-7" />
       </a>
-      <footer id="contact" className="bg-slate-900 text-white py-12 lg:py-16 border-t border-slate-800">
+      <footer id="contact" className="bg-zinc-900 text-white py-12 lg:py-16 border-t border-zinc-800">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
@@ -194,14 +194,14 @@ export default function Footer() {
               </div>
               <button
                 onClick={() => scrollToSection("hero")}
-                className="bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2.5 rounded-full mt-6 font-semibold hover:from-red-500 hover:to-red-400 transition-all duration-300 shadow-lg hover:shadow-red-500/30 hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2.5 rounded-full mt-6 font-semibold hover:from-red-500 hover:to-red-400 transition-all duration-300 shadow-lg hover:shadow-red-500/30 hover:-tranzinc-y-0.5"
               >
                 Get Quote
               </button>
             </div>
           </div>
 
-          <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+          <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} Chalksnboard. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy-policy" className="hover:text-white transition-colors">

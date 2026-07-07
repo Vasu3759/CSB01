@@ -124,7 +124,7 @@ export default function OurGalleryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-900">
       <Header />
 
       {/* Hero Section */}

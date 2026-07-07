@@ -31,7 +31,7 @@ export default function HeroSection() {
       {/* Video Background (Optional - might want to remove if going pure minimalist, but keeping for now) */}
       <div className="absolute inset-0 w-full h-full z-0 min-h-screen">
         <video
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 grayscale"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -tranzinc-x-1/2 -tranzinc-y-1/2 object-cover opacity-10 grayscale"
           autoPlay
           muted
           loop
@@ -75,7 +75,7 @@ export default function HeroSection() {
             >
               <span className="relative z-10 flex items-center gap-2 pointer-events-none">
                 Get Free Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:tranzinc-x-1 transition-transform" />
               </span>
             </MagneticButton>
             <MagneticButton
@@ -102,7 +102,7 @@ export default function HeroSection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 sm:p-3 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-[0_0_10px_rgba(239,68,68,0.15)] hover:shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                  className="p-2 sm:p-3 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-tranzinc-y-1 shadow-[0_0_10px_rgba(239,68,68,0.15)] hover:shadow-[0_0_20px_rgba(239,68,68,0.4)]"
                 >
                   <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>

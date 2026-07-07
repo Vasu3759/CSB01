@@ -34,7 +34,7 @@ export default function ClientLogosSection() {
     <section className="bg-background py-16 md:py-24 relative overflow-hidden border-t border-border/10">
       
       {/* Background Atmosphere */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-0 left-1/2 -tranzinc-x-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10 mb-12">
         <div className="text-center">
@@ -62,7 +62,7 @@ export default function ClientLogosSection() {
           {dupRow1.map((client, index) => (
             <div 
               key={`row1-${client.id}-${index}`}
-              className="mx-3 md:mx-4 w-40 md:w-56 h-24 md:h-32 bg-card rounded-2xl border border-border/50 flex items-center justify-center p-4 cursor-pointer transform hover:-translate-y-2 hover:shadow-md transition-all duration-300 group/card"
+              className="mx-3 md:mx-4 w-40 md:w-56 h-24 md:h-32 bg-card rounded-2xl border border-border/50 flex items-center justify-center p-4 cursor-pointer transform hover:-tranzinc-y-2 hover:shadow-md transition-all duration-300 group/card"
               title={client.name}
             >
               <div className="relative w-full h-full flex items-center justify-center">
@@ -83,7 +83,7 @@ export default function ClientLogosSection() {
           {dupRow2.map((client, index) => (
             <div 
               key={`row2-${client.id}-${index}`}
-              className="mx-3 md:mx-4 w-40 md:w-56 h-24 md:h-32 bg-card rounded-2xl border border-border/50 flex items-center justify-center p-4 cursor-pointer transform hover:-translate-y-2 hover:shadow-md transition-all duration-300 group/card"
+              className="mx-3 md:mx-4 w-40 md:w-56 h-24 md:h-32 bg-card rounded-2xl border border-border/50 flex items-center justify-center p-4 cursor-pointer transform hover:-tranzinc-y-2 hover:shadow-md transition-all duration-300 group/card"
               title={client.name}
             >
               <div className="relative w-full h-full flex items-center justify-center">

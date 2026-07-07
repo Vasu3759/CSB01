@@ -18,9 +18,9 @@ export default function LegalPage({ activeTab }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white pt-20">
+    <div className="min-h-screen bg-zinc-900 text-white pt-20">
       {/* Page Header */}
-      <div className="bg-slate-800 border-b border-slate-700">
+      <div className="bg-zinc-800 border-b border-zinc-700">
         <div className="container mx-auto px-4 lg:px-6 py-8">
           <div className="flex items-center space-x-4">
             <button
@@ -30,7 +30,7 @@ export default function LegalPage({ activeTab }) {
               <ArrowLeft className="w-5 h-5" />
               <span>Back</span>
             </button>
-            <div className="h-6 w-px bg-slate-600"></div>
+            <div className="h-6 w-px bg-zinc-600"></div>
             <div className="flex items-center space-x-2">
               <Shield className="w-6 h-6 text-red-500" />
               <h1 className="text-xl font-bold">Legal & Privacy</h1>
@@ -40,7 +40,7 @@ export default function LegalPage({ activeTab }) {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="bg-slate-800 border-b border-slate-700">
+      <div className="bg-zinc-800 border-b border-zinc-700">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="flex space-x-8">
             <button
@@ -79,7 +79,7 @@ export default function LegalPage({ activeTab }) {
           {activeTab === "privacy" && (
             <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
               {/* Privacy Policy Content */}
-              <div className="bg-slate-800 rounded-lg p-6 lg:p-8">
+              <div className="bg-zinc-800 rounded-lg p-6 lg:p-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <Shield className="w-8 h-8 text-red-500" />
                   <h2 className="text-2xl font-bold">Privacy Policy</h2>
@@ -90,7 +90,7 @@ export default function LegalPage({ activeTab }) {
                     This Privacy Policy along with its terms and uses discloses the privacy practices for "Bodvid Private Limited" with regard to your use of the online platform www.chalksnboard.in ("website"). This privacy policy governs your use of the application "ChalksnBoard" - Classrooms redefined' ('Application'), www.chalksnboard.in ('website') and the other associated applications, products, websites and services are managed by the Company.
                   </p>
 
-                  <div className="bg-slate-700 rounded-lg p-4 mb-6">
+                  <div className="bg-zinc-700 rounded-lg p-4 mb-6">
                     <div className="flex items-start space-x-3">
                       <AlertTriangle className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
                       <div>
@@ -188,11 +188,11 @@ export default function LegalPage({ activeTab }) {
                     We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
                   </p>
 
-                  <div className="bg-slate-700 rounded-lg p-4 mb-6">
+                  <div className="bg-zinc-700 rounded-lg p-4 mb-6">
                     <div className="flex items-start space-x-3">
-                      <FileText className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                      <FileText className="w-5 h-5 text-zinc-500 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-blue-500 mb-2">Effective Date</h4>
+                        <h4 className="font-semibold text-zinc-500 mb-2">Effective Date</h4>
                         <p className="text-gray-300 text-sm">
                           This policy is effective as of 2020-08-15
                         </p>
@@ -210,7 +210,7 @@ export default function LegalPage({ activeTab }) {
                     <span>info@chalksnboard.com</span>
                   </div>
 
-                  <div className="bg-slate-700 rounded-lg p-4">
+                  <div className="bg-zinc-700 rounded-lg p-4">
                     <div className="flex items-start space-x-3">
                       <Shield className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
                       <div>
@@ -229,7 +229,7 @@ export default function LegalPage({ activeTab }) {
           {activeTab === "terms" && (
             <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
               {/* Terms and Conditions Content */}
-              <div className="bg-slate-800 rounded-lg p-6 lg:p-8">
+              <div className="bg-zinc-800 rounded-lg p-6 lg:p-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <FileText className="w-8 h-8 text-red-500" />
                   <h2 className="text-2xl font-bold">Terms and Conditions</h2>
@@ -240,7 +240,7 @@ export default function LegalPage({ activeTab }) {
                     These terms & Conditions ("terms") of (a) use of our website www.chalksnboard.com ("website"), our applications ("application") or any products or services in connection with the application/, website/products ("services") or (b) any modes of registrations or usage of products, are between Bodvid Private Limited ("Company/We/Us/Our") and its users ("user/You/Your").
                   </p>
 
-                  <div className="bg-slate-700 rounded-lg p-4 mb-6">
+                  <div className="bg-zinc-700 rounded-lg p-4 mb-6">
                     <div className="flex items-start space-x-3">
                       <AlertTriangle className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
                       <div>
@@ -296,11 +296,11 @@ export default function LegalPage({ activeTab }) {
                     In the event of any dispute arising between the parties with respect to this Agreement, the same shall be referred to the Sole Arbitrator and the arbitration shall be in accordance with Arbitration and Conciliation Act of 1996. The language of the arbitration proceeding shall be English. The seat and place of arbitration shall be New Delhi and the decision of the Arbitrator shall be final and binding on both parties herein.
                   </p>
 
-                  <div className="bg-slate-700 rounded-lg p-4 mb-6">
+                  <div className="bg-zinc-700 rounded-lg p-4 mb-6">
                     <div className="flex items-start space-x-3">
-                      <FileText className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                      <FileText className="w-5 h-5 text-zinc-500 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-blue-500 mb-2">Effective Date</h4>
+                        <h4 className="font-semibold text-zinc-500 mb-2">Effective Date</h4>
                         <p className="text-gray-300 text-sm">
                           These terms and conditions are effective as of 2020-08-15
                         </p>

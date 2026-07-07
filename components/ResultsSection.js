@@ -1,11 +1,11 @@
 export default function ResultsSection() {
   return (
-    <section className="bg-slate-900 py-16 lg:py-20">
+    <section className="bg-zinc-900 py-16 lg:py-20">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Side - Mobile Results */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 lg:p-8 text-white relative overflow-hidden">
+            <div className="bg-gradient-to-br from-zinc-600 to-zinc-800 rounded-2xl p-6 lg:p-8 text-white relative overflow-hidden">
               <div className="absolute top-4 right-4 text-4xl lg:text-6xl opacity-20">📱</div>
               <h3 className="text-xl lg:text-2xl font-bold mb-6">
                 CHALKSNBOARD

@@ -155,7 +155,7 @@ export default function FAQPage() {
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-900">
       <Header />
 
       {/* Hero Section */}
@@ -175,7 +175,7 @@ export default function FAQPage() {
         {/* Search Bar */}
         <div className="mb-12">
           <div className="max-w-2xl mx-auto relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 transform -tranzinc-y-1/2 text-white/40 w-5 h-5" />
             <input
               type="text"
               placeholder="Search FAQs..."

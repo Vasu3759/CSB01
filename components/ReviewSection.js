@@ -35,7 +35,7 @@ const ReviewSection = () => {
     <section className="relative min-h-[80vh] bg-[#09090b] py-24 overflow-hidden">
       
       {/* Elegant Ambient Glows (Grayscale Effect) */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-slate-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-zinc-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gray-400/5 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
 
       {/* Subtle grid pattern overlay */}
@@ -44,13 +44,13 @@ const ReviewSection = () => {
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10">
         <div className="text-center mb-20 relative">
-          <span className="text-slate-400 font-medium tracking-widest uppercase text-sm mb-4 block">
+          <span className="text-zinc-400 font-medium tracking-widest uppercase text-sm mb-4 block">
             Impact & Growth
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-slate-600">Visionaries</span>
+            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-600">Visionaries</span>
           </h2>
-          <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+          <p className="text-zinc-500 max-w-2xl mx-auto text-lg">
             See how we've helped institutions and brands engineer predictable growth through elegant digital solutions.
           </p>
         </div>
@@ -65,10 +65,10 @@ const ReviewSection = () => {
             {[...reviews, ...reviews, ...reviews].map((review, idx) => (
               <div
                 key={idx}
-                className="relative w-[400px] flex-shrink-0 bg-white/[0.02] backdrop-blur-2xl p-8 rounded-3xl border border-white/[0.05] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] group"
+                className="relative w-[400px] flex-shrink-0 bg-white/[0.02] backdrop-blur-2xl p-8 rounded-3xl border border-white/[0.05] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-500 hover:-tranzinc-y-2 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] group"
               >
                 {/* Subtle top inner highlight */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="absolute top-0 left-1/2 -tranzinc-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 
                 <div className="flex items-center gap-5 mb-8">
                   <div className="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-b from-white/10 to-white/5 shadow-inner">
@@ -77,7 +77,7 @@ const ReviewSection = () => {
                       alt={review.name || "Review"}
                       width={64}
                       height={64}
-                      className="rounded-full w-full h-full object-cover bg-[#09090b] border border-slate-800"
+                      className="rounded-full w-full h-full object-cover bg-[#09090b] border border-zinc-800"
                     />
                   </div>
                   <div>
@@ -86,7 +86,7 @@ const ReviewSection = () => {
                     </h3>
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-3.5 h-3.5 text-slate-400 fill-current opacity-80" viewBox="0 0 20 20">
+                        <svg key={i} className="w-3.5 h-3.5 text-zinc-400 fill-current opacity-80" viewBox="0 0 20 20">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                       ))}
@@ -94,7 +94,7 @@ const ReviewSection = () => {
                   </div>
                 </div>
 
-                <div className="text-slate-400/90 text-[15px] leading-relaxed font-light relative">
+                <div className="text-zinc-400/90 text-[15px] leading-relaxed font-light relative">
                   <p className="line-clamp-4">"{review.text}"</p>
                 </div>
               </div>

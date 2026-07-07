@@ -71,7 +71,7 @@ export default function PortfolioSection() {
                   <img src="/images/unnamed (1).webp" alt="Gujarati Content" className="w-full h-full object-contain"/>
                 </div>
                 <div 
-                  className="bg-blue-100 rounded-lg p-4 aspect-[9/13] flex items-center justify-center hover:bg-blue-200 transition-colors overflow-hidden cursor-pointer"
+                  className="bg-zinc-100 rounded-lg p-4 aspect-[9/13] flex items-center justify-center hover:bg-zinc-200 transition-colors overflow-hidden cursor-pointer"
                   onClick={() => window.open("https://play.google.com/store/apps/details?id=com.findMySchool.chalksnboard&pcampaignid=web_share", "_blank", "noopener,noreferrer")}
                 >
                   <img src="/images/unnamed (2).webp" alt="Celebrating" className="w-full h-full object-contain"/>
@@ -136,7 +136,7 @@ export default function PortfolioSection() {
                   onClick={() => window.open("https://www.instagram.com/mbispatna/?hl=en", "_blank", "noopener,noreferrer")}
                 >
                   <div className="flex items-center w-full mb-2">
-                      <img src="/images/placeholder-user.jpg" alt="mbispatna" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-blue-500"/>
+                      <img src="/images/placeholder-user.jpg" alt="mbispatna" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-zinc-500"/>
                       <span className="font-bold text-xs sm:text-sm ml-2 truncate">mbispatna</span>
                   </div>
                   <div className="flex justify-around w-full text-xs sm:text-sm text-center mb-2">

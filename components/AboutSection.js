@@ -40,8 +40,8 @@ export default function AboutSection() {
     <section id="about" className="relative pt-12 md:pt-16 pb-24 md:pb-32 bg-background overflow-hidden border-t border-border/50">
       
       {/* Premium Background Atmosphere */}
-      <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none -translate-y-1/2 -translate-x-1/2" />
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none translate-y-1/3 translate-x-1/4" />
+      <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none -tranzinc-y-1/2 -tranzinc-x-1/2" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none tranzinc-y-1/3 tranzinc-x-1/4" />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10 max-w-7xl">
         <div className="text-center mb-20">

@@ -25,7 +25,7 @@ export default function VantaMinimalBackground({ children }) {
           minWidth: 200.0,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0x020617, // Very dark base
+          color: 0x09090b, // Very dark base
           shininess: 15.00, // Subtle shine
           waveHeight: 12.50, // Gentle waves
           waveSpeed: 0.30, // Very slow moving

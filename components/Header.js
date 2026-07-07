@@ -82,14 +82,14 @@ export default function Header({ onServiceClick, onPageClick, hideOnTop }) {
       className="fixed top-0 left-0 right-0 w-full z-50 pt-4 px-4 flex justify-center pointer-events-none"
     >
       {/* Floating Island Navbar */}
-      <nav className="relative w-full max-w-7xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-full px-4 lg:px-6 py-3 flex items-center justify-between pointer-events-auto transition-colors duration-300">
+      <nav className="relative w-full max-w-7xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-white/40 dark:border-zinc-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-full px-4 lg:px-6 py-3 flex items-center justify-between pointer-events-auto transition-colors duration-300">
         
         {/* Logo */}
         <div 
           className="flex items-center space-x-2 cursor-pointer group magnetic-target" 
           onClick={() => router.push("/")}
         >
-          <div className="text-slate-900 dark:text-white font-black text-xl tracking-tighter">
+          <div className="text-zinc-900 dark:text-white font-black text-xl tracking-tighter">
             CHALKS<span className="text-red-500 drop-shadow-md">N</span>BOARD
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function Header({ onServiceClick, onPageClick, hideOnTop }) {
                 key={link.name}
                 onClick={link.action}
                 className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 magnetic-target
-                  ${isActive ? "text-red-500" : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"}`}
+                  ${isActive ? "text-red-500" : "text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white"}`}
               >
                 {isActive && (
                   <motion.div
@@ -120,12 +120,12 @@ export default function Header({ onServiceClick, onPageClick, hideOnTop }) {
 
         {/* Contact & CTA */}
         <div className="flex items-center space-x-4">
-          <div className="hidden xl:flex items-center space-x-2 text-slate-600 dark:text-slate-300 magnetic-target group cursor-pointer" onClick={() => window.location.href="tel:+918860878346"}>
+          <div className="hidden xl:flex items-center space-x-2 text-zinc-600 dark:text-zinc-300 magnetic-target group cursor-pointer" onClick={() => window.location.href="tel:+918860878346"}>
             <div className="w-8 h-8 bg-red-50 dark:bg-red-500/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
               <Phone className="w-4 h-4 text-red-500" />
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-red-500 transition-colors">
+              <span className="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-red-500 transition-colors">
                 +91 8860878346
               </span>
             </div>
@@ -136,19 +136,19 @@ export default function Header({ onServiceClick, onPageClick, hideOnTop }) {
             className="hidden md:flex bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg hover:shadow-red-500/30 overflow-hidden"
           >
             <span className="relative z-10">Plans & Packages</span>
-            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] hover:translate-x-[150%] transition-transform duration-700 ease-in-out"></div>
+            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -tranzinc-x-[150%] hover:tranzinc-x-[150%] transition-transform duration-700 ease-in-out"></div>
           </MagneticButton>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="lg:hidden p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <motion.div
               animate={{ rotate: mobileMenuOpen ? 90 : 0 }}
               transition={{ duration: 0.2 }}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6 text-slate-900 dark:text-white" /> : <Menu className="w-6 h-6 text-slate-900 dark:text-white" />}
+              {mobileMenuOpen ? <X className="w-6 h-6 text-zinc-900 dark:text-white" /> : <Menu className="w-6 h-6 text-zinc-900 dark:text-white" />}
             </motion.div>
           </button>
         </div>
@@ -162,19 +162,19 @@ export default function Header({ onServiceClick, onPageClick, hideOnTop }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-[80px] left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-2xl rounded-2xl overflow-hidden pointer-events-auto lg:hidden"
+            className="absolute top-[80px] left-4 right-4 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl border border-white/20 dark:border-zinc-700/50 shadow-2xl rounded-2xl overflow-hidden pointer-events-auto lg:hidden"
           >
             <div className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={link.action}
-                  className="px-6 py-4 text-left font-semibold text-slate-700 dark:text-slate-200 hover:bg-red-50 dark:hover:bg-slate-800 hover:text-red-500 transition-colors"
+                  className="px-6 py-4 text-left font-semibold text-zinc-700 dark:text-zinc-200 hover:bg-red-50 dark:hover:bg-zinc-800 hover:text-red-500 transition-colors"
                 >
                   {link.name}
                 </button>
               ))}
-              <div className="px-6 pt-4 pb-2 mt-2 border-t border-slate-100 dark:border-slate-800">
+              <div className="px-6 pt-4 pb-2 mt-2 border-t border-zinc-100 dark:border-zinc-800">
                 <button
                   onClick={() => handleServiceClick("Free Consultation")}
                   className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-3 rounded-xl font-bold text-sm shadow-md"

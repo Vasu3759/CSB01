@@ -51,11 +51,7 @@ export default function ServicesSection() {
 
   return (
     <>
-      <section id="services" className="relative overflow-hidden pt-40 lg:pt-60 pb-64 lg:pb-72"
-        style={{
-          background: "linear-gradient(120deg, #ff4e00 0%, #ff7300 40%, #ff9000 70%, #ec9f05 100%)"
-        }}
-      >
+      <section id="services" className="relative overflow-hidden pt-40 lg:pt-60 pb-64 lg:pb-72 bg-gradient-to-b from-red-500 to-red-700">
         {/* Curved SVG top edge */}
         <svg viewBox="0 0 1440 200" className="absolute top-0 left-0 w-full h-[140px] lg:h-[200px]" preserveAspectRatio="none">
           <path fill="#fff" d="M0,128L48,138.7C96,149,192,171,288,181.3C384,192,480,192,576,181.3C672,171,768,149,864,149.3C960,149,1056,171,1152,176C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" />
@@ -124,10 +120,9 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.4 }}
-          className="absolute left-0 bottom-0 w-full flex justify-center translate-y-8 md:translate-y-0 z-20"
+          className="absolute left-0 bottom-0 w-full flex justify-center tranzinc-y-8 md:tranzinc-y-0 z-20"
         >
-          <div className="text-white rounded-t-3xl md:rounded-xl px-6 py-8 md:py-10 max-w-3xl w-full mx-auto text-center border-t border-x md:border border-white/20" style={{
-            background: "linear-gradient(120deg, #ff4e00 0%, #ff7300 40%, #ff9000 70%, #ec9f05 100%)",
+          <div className="text-white rounded-t-3xl md:rounded-xl px-6 py-8 md:py-10 max-w-3xl w-full mx-auto text-center border-t border-x md:border border-white/20 bg-gradient-to-b from-red-500 to-red-700" style={{
             boxShadow: "0 -10px 40px 0 rgba(0,0,0,0.25), inset 0 2px 5px rgba(255,255,255,0.3)"
           }}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 drop-shadow-md">

@@ -45,7 +45,7 @@ export default function ServiceCardsSection() {
           {/* Performance Advertising */}
           <div 
             ref={el => cardsRef.current[0] = el}
-            className="crazy-card group relative bg-card rounded-3xl p-8 lg:p-10 text-center border border-border/50 overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]"
+            className="crazy-card group relative bg-card rounded-3xl p-8 lg:p-10 text-center border border-border/50 overflow-hidden transition-all duration-500 hover:-tranzinc-y-4 hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]"
           >
             {/* Glowing Spotlight Effect */}
             <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" 
@@ -62,7 +62,7 @@ export default function ServiceCardsSection() {
                 className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2"
               >
                 Explore Strategy
-                <svg className="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <svg className="w-4 h-4 group-hover:tranzinc-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </button>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function ServiceCardsSection() {
           {/* Loyalty & Retention */}
           <div 
             ref={el => cardsRef.current[1] = el}
-            className="crazy-card group relative bg-card rounded-3xl p-8 lg:p-10 text-center border border-border/50 overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]"
+            className="crazy-card group relative bg-card rounded-3xl p-8 lg:p-10 text-center border border-border/50 overflow-hidden transition-all duration-500 hover:-tranzinc-y-4 hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]"
           >
             {/* Glowing Spotlight Effect */}
             <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" 
@@ -87,7 +87,7 @@ export default function ServiceCardsSection() {
                 className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2"
               >
                 Explore Strategy
-                <svg className="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <svg className="w-4 h-4 group-hover:tranzinc-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </button>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function ServiceCardsSection() {
           {/* Digital Ecosystems */}
           <div 
             ref={el => cardsRef.current[2] = el}
-            className="crazy-card group relative bg-card rounded-3xl p-8 lg:p-10 text-center border border-border/50 overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]"
+            className="crazy-card group relative bg-card rounded-3xl p-8 lg:p-10 text-center border border-border/50 overflow-hidden transition-all duration-500 hover:-tranzinc-y-4 hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]"
           >
             {/* Glowing Spotlight Effect */}
             <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" 
@@ -112,7 +112,7 @@ export default function ServiceCardsSection() {
                 className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2"
               >
                 Explore Strategy
-                <svg className="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <svg className="w-4 h-4 group-hover:tranzinc-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </button>
             </div>
           </div>

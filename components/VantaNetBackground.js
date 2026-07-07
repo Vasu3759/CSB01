@@ -25,7 +25,7 @@ export default function VantaNetBackground({ children }) {
           scale: 1.00,
           scaleMobile: 1.00,
           color: 0xef4444, // Subtle red
-          backgroundColor: 0x0f172a, // slate-900
+          backgroundColor: 0x18181b, // zinc-900
           points: 5.00, // Reduced from 12 for minimal look
           maxDistance: 15.00, // Reduced connections
           spacing: 25.00, // Increased spacing between nodes
