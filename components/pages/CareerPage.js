@@ -29,13 +29,112 @@ import Header from "../Header"
 import MagneticButton from "../ui/MagneticButton"
 import VantaMinimalBackground from "../VantaMinimalBackground"
 
+const jobOpenings = [
+  {
+    id: 1,
+    title: "Senior Digital Marketing Manager",
+    department: "Marketing",
+    location: "Delhi, India",
+    type: "Full-time",
+    experience: "3-5 years",
+    salary: "₹8-12 LPA",
+    description: "Lead digital marketing campaigns and drive ROI for our clients.",
+    requirements: [
+      "3+ years in digital marketing",
+      "Experience with Google Ads, Facebook Ads",
+      "Strong analytical skills",
+      "Team leadership experience",
+    ],
+  },
+  {
+    id: 2,
+    title: "UI/UX Designer",
+    department: "Design",
+    location: "Mumbai, India",
+    type: "Full-time",
+    experience: "2-4 years",
+    salary: "₹6-10 LPA",
+    description: "Create stunning user experiences for web and mobile applications.",
+    requirements: [
+      "Proficiency in Figma, Adobe Creative Suite",
+      "Strong portfolio of UI/UX work",
+      "Understanding of user-centered design",
+      "Experience with prototyping tools",
+    ],
+  },
+  {
+    id: 3,
+    title: "Content Marketing Specialist",
+    department: "Content",
+    location: "Jaipur, India",
+    type: "Full-time",
+    experience: "1-3 years",
+    salary: "₹4-7 LPA",
+    description: "Develop engaging content strategies that drive brand awareness.",
+    requirements: [
+      "Excellent writing and editing skills",
+      "SEO knowledge",
+      "Social media expertise",
+      "Creative thinking abilities",
+    ],
+  },
+  {
+    id: 4,
+    title: "Full Stack Developer",
+    department: "Technology",
+    location: "Remote",
+    type: "Full-time",
+    experience: "2-5 years",
+    salary: "₹7-15 LPA",
+    description: "Build scalable web applications using modern technologies.",
+    requirements: [
+      "React.js, Node.js experience",
+      "Database management skills",
+      "API development experience",
+      "Version control (Git) proficiency",
+    ],
+  },
+  {
+    id: 5,
+    title: "Business Development Executive",
+    department: "Sales",
+    location: "Delhi, India",
+    type: "Full-time",
+    experience: "1-3 years",
+    salary: "₹3-6 LPA + Incentives",
+    description: "Drive business growth through client acquisition and relationship management.",
+    requirements: [
+      "Strong communication skills",
+      "Sales experience preferred",
+      "Client relationship management",
+      "Target-oriented mindset",
+    ],
+  },
+  {
+    id: 6,
+    title: "SEO Specialist",
+    department: "Marketing",
+    location: "Mumbai, India",
+    type: "Full-time",
+    experience: "2-4 years",
+    salary: "₹5-9 LPA",
+    description: "Optimize websites and content for search engine rankings.",
+    requirements: [
+      "SEO tools expertise (Ahrefs, SEMrush)",
+      "Technical SEO knowledge",
+      "Content optimization skills",
+      "Analytics and reporting experience",
+    ],
+  },
+]
+
 export default function CareerPage() {
-  const [selectedJob, setSelectedJob] = useState(null)
+  const [selectedJob, setSelectedJob] = useState(jobOpenings[0])
   const [applicationForm, setApplicationForm] = useState({
     name: "",
     email: "",
     phone: "",
-    position: "",
+    position: jobOpenings[0].title,
     experience: "",
     resume: null,
   })
@@ -43,105 +142,6 @@ export default function CareerPage() {
   const [filter, setFilter] = useState({ department: "", location: "", experience: "" })
   const [formErrors, setFormErrors] = useState({})
   const [submitting, setSubmitting] = useState(false)
-
-  const jobOpenings = [
-    {
-      id: 1,
-      title: "Senior Digital Marketing Manager",
-      department: "Marketing",
-      location: "Delhi, India",
-      type: "Full-time",
-      experience: "3-5 years",
-      salary: "₹8-12 LPA",
-      description: "Lead digital marketing campaigns and drive ROI for our clients.",
-      requirements: [
-        "3+ years in digital marketing",
-        "Experience with Google Ads, Facebook Ads",
-        "Strong analytical skills",
-        "Team leadership experience",
-      ],
-    },
-    {
-      id: 2,
-      title: "UI/UX Designer",
-      department: "Design",
-      location: "Mumbai, India",
-      type: "Full-time",
-      experience: "2-4 years",
-      salary: "₹6-10 LPA",
-      description: "Create stunning user experiences for web and mobile applications.",
-      requirements: [
-        "Proficiency in Figma, Adobe Creative Suite",
-        "Strong portfolio of UI/UX work",
-        "Understanding of user-centered design",
-        "Experience with prototyping tools",
-      ],
-    },
-    {
-      id: 3,
-      title: "Content Marketing Specialist",
-      department: "Content",
-      location: "Jaipur, India",
-      type: "Full-time",
-      experience: "1-3 years",
-      salary: "₹4-7 LPA",
-      description: "Develop engaging content strategies that drive brand awareness.",
-      requirements: [
-        "Excellent writing and editing skills",
-        "SEO knowledge",
-        "Social media expertise",
-        "Creative thinking abilities",
-      ],
-    },
-    {
-      id: 4,
-      title: "Full Stack Developer",
-      department: "Technology",
-      location: "Remote",
-      type: "Full-time",
-      experience: "2-5 years",
-      salary: "₹7-15 LPA",
-      description: "Build scalable web applications using modern technologies.",
-      requirements: [
-        "React.js, Node.js experience",
-        "Database management skills",
-        "API development experience",
-        "Version control (Git) proficiency",
-      ],
-    },
-    {
-      id: 5,
-      title: "Business Development Executive",
-      department: "Sales",
-      location: "Delhi, India",
-      type: "Full-time",
-      experience: "1-3 years",
-      salary: "₹3-6 LPA + Incentives",
-      description: "Drive business growth through client acquisition and relationship management.",
-      requirements: [
-        "Strong communication skills",
-        "Sales experience preferred",
-        "Client relationship management",
-        "Target-oriented mindset",
-      ],
-    },
-    {
-      id: 6,
-      title: "SEO Specialist",
-      department: "Marketing",
-      location: "Mumbai, India",
-      type: "Full-time",
-      experience: "2-4 years",
-      salary: "₹5-9 LPA",
-      description: "Optimize websites and content for search engine rankings.",
-      requirements: [
-        "SEO tools expertise (Ahrefs, SEMrush)",
-        "Technical SEO knowledge",
-        "Content optimization skills",
-        "Analytics and reporting experience",
-      ],
-    },
-  ]
 
   const benefits = [
     { icon: Heart, title: "Health Insurance", description: "Comprehensive medical coverage", color: "text-red-500" },
