@@ -3,27 +3,29 @@
 import { useState } from "react"
 import Header from "../components/Header"
 import HeroSection from "../components/HeroSection"
-import AIMarketingSection from "../components/AIMarketingSection"
-import BrandFutureSection from "../components/BrandFutureSection"
-import ServicesSection from "../components/ServicesSection"
-import ComprehensiveServicesSection from "../components/ComprehensiveServicesSection"
-import MediaServicesSection from "../components/MediaServicesSection"
-import WorkflowSection from "../components/WorkflowSection"
-import MagazineStatsSection from "../components/MagazineStatsSection"
-import WhyChalksnboardSection from "../components/WhyChalksnboardSection"
-import ServiceCardsSection from "../components/ServiceCardsSection"
-import CTASection from "../components/CTASection"
-import AdditionalServiceCardsSection from "../components/AdditionalServiceCardsSection"
-import AboutSection from "../components/AboutSection"
-import ResultsSection from "../components/ResultsSection"
-import PortfolioSection from "../components/PortfolioSection"
-import ReviewSection from "../components/ReviewSection"
-import GlobalPartnersSection from "../components/GlobalPartnersSection"
-import ClientLogosSection from "../components/ClientLogosSection"
-import Footer from "../components/Footer"
-import PageRouter from "../components/pages/PageRouter"
-import ServiceRouter from "../components/services/ServiceRouter"
-import VantaCloudsBackground from "../components/VantaCloudsBackground";
+import dynamic from "next/dynamic"
+
+const AIMarketingSection = dynamic(() => import("../components/AIMarketingSection"))
+const BrandFutureSection = dynamic(() => import("../components/BrandFutureSection"))
+const ServicesSection = dynamic(() => import("../components/ServicesSection"))
+const ComprehensiveServicesSection = dynamic(() => import("../components/ComprehensiveServicesSection"))
+const MediaServicesSection = dynamic(() => import("../components/MediaServicesSection"))
+const WorkflowSection = dynamic(() => import("../components/WorkflowSection"))
+const MagazineStatsSection = dynamic(() => import("../components/MagazineStatsSection"))
+
+const ServiceCardsSection = dynamic(() => import("../components/ServiceCardsSection"))
+const CTASection = dynamic(() => import("../components/CTASection"))
+const AdditionalServiceCardsSection = dynamic(() => import("../components/AdditionalServiceCardsSection"))
+const AboutSection = dynamic(() => import("../components/AboutSection"))
+const ResultsSection = dynamic(() => import("../components/ResultsSection"))
+const PortfolioSection = dynamic(() => import("../components/PortfolioSection"))
+const ReviewSection = dynamic(() => import("../components/ReviewSection"))
+const GlobalPartnersSection = dynamic(() => import("../components/GlobalPartnersSection"))
+const ClientLogosSection = dynamic(() => import("../components/ClientLogosSection"))
+const Footer = dynamic(() => import("../components/Footer"))
+const PageRouter = dynamic(() => import("../components/pages/PageRouter"))
+const ServiceRouter = dynamic(() => import("../components/services/ServiceRouter"))
+const VantaCloudsBackground = dynamic(() => import("../components/VantaCloudsBackground"))
 
 export default function ChalksnboardClone() {
   const [currentPage, setCurrentPage] = useState("home")
@@ -60,7 +62,7 @@ export default function ChalksnboardClone() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header onServiceClick={handleServiceNavigation} onPageClick={handlePageNavigation} />
       <HeroSection />
       <AIMarketingSection />
@@ -78,7 +80,6 @@ export default function ChalksnboardClone() {
       
       <VantaCloudsBackground>
         <PortfolioSection />
-        <WhyChalksnboardSection />
       </VantaCloudsBackground>
       <ReviewSection />
       

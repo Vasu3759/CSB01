@@ -118,7 +118,7 @@ export default function TestimonialsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-900">
       <Header />
 
       {/* Hero Section */}
@@ -179,7 +179,7 @@ export default function TestimonialsPage() {
                           .join("")}
                       </span>
                       {filteredTestimonials[currentTestimonial]?.videoTestimonial && (
-                        <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-zinc-500 rounded-full flex items-center justify-center">
                           <Play className="w-4 h-4 text-white" />
                         </div>
                       )}
@@ -216,7 +216,7 @@ export default function TestimonialsPage() {
                         <div className="text-white text-sm">{filteredTestimonials[currentTestimonial]?.results}</div>
                       </div>
                       <div className="bg-white/5 rounded-lg p-3">
-                        <div className="text-blue-400 font-bold text-sm">Project Type</div>
+                        <div className="text-zinc-400 font-bold text-sm">Project Type</div>
                         <div className="text-white text-sm">{filteredTestimonials[currentTestimonial]?.project}</div>
                       </div>
                     </div>
@@ -308,7 +308,7 @@ export default function TestimonialsPage() {
                     <p className="text-white/60 text-xs">{testimonial.company}</p>
                   </div>
                   {testimonial.videoTestimonial && (
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-zinc-500 rounded-full flex items-center justify-center">
                       <Play className="w-4 h-4 text-white" />
                     </div>
                   )}
@@ -333,7 +333,7 @@ export default function TestimonialsPage() {
                     <div className="text-white text-xs">{testimonial.results}</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-2">
-                    <div className="text-blue-400 font-bold text-xs">Industry</div>
+                    <div className="text-zinc-400 font-bold text-xs">Industry</div>
                     <div className="text-white text-xs">{testimonial.industry}</div>
                   </div>
                 </div>

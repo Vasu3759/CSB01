@@ -69,7 +69,7 @@ export default function PPCPaidAdsPage() {
               <div className="text-gray-600">Cost Reduction</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">2.5M+</div>
+              <div className="text-4xl font-bold text-zinc-600 mb-2">2.5M+</div>
               <div className="text-gray-600">Ad Spend Managed</div>
             </div>
             <div>

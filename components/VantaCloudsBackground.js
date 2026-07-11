@@ -11,11 +11,17 @@ export default function VantaCloudsBackground({ children }) {
       vantaEffect.current = CLOUDS({
         el: vantaRef.current,
         THREE: THREE,
-        mouseControls: true,
-        touchControls: true,
+        mouseControls: false,
+        touchControls: false,
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
+        skyColor: 0x18181b,
+        cloudColor: 0x27272a,
+        cloudShadowColor: 0x09090b,
+        sunColor: 0xef4444,
+        sunGlareColor: 0xef4444,
+        sunlightColor: 0xef4444
       });
     }
     return () => {

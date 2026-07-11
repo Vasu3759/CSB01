@@ -17,7 +17,7 @@ export default function SEOPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 to-zinc-600 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <Search className="w-10 h-10" />

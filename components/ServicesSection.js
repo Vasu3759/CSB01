@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const icons = [
   // Lightbulb (Creative)
@@ -13,14 +15,26 @@ const icons = [
   <svg key="engagement" width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="32" fill="none"/><rect x="16" y="16" width="12" height="12" rx="3" fill="#fff"/><rect x="36" y="16" width="12" height="12" rx="3" fill="#fff"/><rect x="16" y="36" width="12" height="12" rx="3" fill="#fff"/><rect x="36" y="36" width="12" height="12" rx="3" fill="#fff"/><circle cx="22" cy="22" r="2" fill="#FF6600"/><circle cx="42" cy="22" r="2" fill="#FF6600"/><circle cx="22" cy="42" r="2" fill="#FF6600"/><circle cx="42" cy="42" r="2" fill="#FF6600"/></svg>,
 ];
 
-export default function ServicesSection() {
-  const scrollToPortfolio = () => {
-    const element = document.getElementById("portfolio")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
     }
   }
+};
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 20 }
+  }
+};
+
+export default function ServicesSection() {
   const [lottieReady, setLottieReady] = useState(false);
 
   useEffect(() => {
@@ -37,63 +51,88 @@ export default function ServicesSection() {
 
   return (
     <>
-      <section id="services" className="relative overflow-hidden py-40 lg:py-60 pb-40"
-        style={{
-          background: "linear-gradient(120deg, #ff4e00 0%, #ff7300 40%, #ff9000 70%, #ec9f05 100%)"
-        }}
-      >
-        {/* Curved SVG top edge - moved lower for visibility */}
-        <svg viewBox="0 0 1440 200" className="absolute top-0 left-0 w-full h-[140px] lg:h-[200px]" style={{transform: 'translateY(0)'}} preserveAspectRatio="none">
+      <section id="services" className="relative overflow-hidden pt-40 lg:pt-60 pb-64 lg:pb-72 bg-gradient-to-b from-red-500 to-red-700">
+        {/* Curved SVG top edge */}
+        <svg viewBox="0 0 1440 200" className="absolute top-0 left-0 w-full h-[140px] lg:h-[200px]" preserveAspectRatio="none">
           <path fill="#fff" d="M0,128L48,138.7C96,149,192,171,288,181.3C384,192,480,192,576,181.3C672,171,768,149,864,149.3C960,149,1056,171,1152,176C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" />
         </svg>
-        {/* Lottie Animation above icons */}
+        
         <div className="container mx-auto px-4 lg:px-6 relative top-20 z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-16"
+          >
             {[
-              { label: "CREATIVE" },
-              { label: "DEVELOPMENT" },
-              { label: "CONVERSION" },
-              { label: "ENGAGEMENT" },
+              { label: "CREATIVE", desc: "Crafting beautiful brand identities and marketing materials that resonate." },
+              { label: "DEVELOPMENT", desc: "Building robust, scalable digital products and web experiences." },
+              { label: "CONVERSION", desc: "Data-driven strategies to turn visitors into loyal customers." },
+              { label: "ENGAGEMENT", desc: "Creating content that captures attention and drives interactions." },
             ].map((item, i) => (
-              <div key={item.label} className="flex flex-col items-center text-white">
-                <div className="mb-4 flex items-center justify-center">
-                  {item.label === "DEVELOPMENT" ? (
-                    lottieReady && (
-                      <dotlottie-player
-                        src="https://lottie.host/a825eb7e-f0c8-48dd-970b-fa5d4db6c9af/uZSvNhpQss.json"
-                        background="transparent"
-                        speed="1"
-                        loop
-                        autoplay
-                        style={{ width: '64px', height: '64px' }}
-                        className="w-16 h-16 lg:w-24 lg:h-24"
-                      ></dotlottie-player>
-                    )
-                  ) : (
-                    icons[i]
-                  )}
-                </div>
-                <h3 className="text-lg lg:text-xl font-bold tracking-wide text-center mt-2">
-                  {item.label}
-                </h3>
-              </div>
+              <motion.div key={item.label} variants={cardVariants} className="h-full">
+                <Tilt 
+                  tiltMaxAngleX={15} 
+                  tiltMaxAngleY={15} 
+                  perspective={1000} 
+                  scale={1.05} 
+                  transitionSpeed={2000}
+                  gyroscope={true}
+                  className="h-full"
+                >
+                  <div className="h-full flex flex-col items-center text-white bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:bg-white/15 transition-colors magnetic-target cursor-pointer group">
+                    <div className="mb-6 flex items-center justify-center h-24 w-24 bg-white/10 rounded-full border border-white/30 group-hover:scale-110 transition-transform duration-500 shadow-inner">
+                      {item.label === "DEVELOPMENT" ? (
+                        lottieReady && (
+                          <dotlottie-player
+                            src="https://lottie.host/a825eb7e-f0c8-48dd-970b-fa5d4db6c9af/uZSvNhpQss.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                            style={{ width: '64px', height: '64px' }}
+                          ></dotlottie-player>
+                        )
+                      ) : (
+                        <div className="group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] transition-all">
+                          {icons[i]}
+                        </div>
+                      )}
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-black tracking-wide text-center mb-3">
+                      {item.label}
+                    </h3>
+                    <p className="text-center text-white/80 text-sm font-medium leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </Tilt>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
+        
         {/* Elevated card at the bottom for the title and subtitle */}
-        <div className="absolute left-0 bottom-0 w-full flex justify-center translate-y-8 md:translate-y-0">
-          <div className="text-white  rounded-xl px-6 py-8 max-w-2xl w-full mx-auto text-center" style={{
-            background: "linear-gradient(120deg, #ff4e00 0%, #ff7300 40%, #ff9000 70%, #ec9f05 100%)",
-            boxShadow: "0 8px 32px 0 rgba(0,0,0,0.35), 0 1.5px 8px 0 rgba(0,0,0,0.30)"
+        <motion.div 
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.4 }}
+          className="absolute left-0 bottom-0 w-full flex justify-center tranzinc-y-8 md:tranzinc-y-0 z-20"
+        >
+          <div className="text-white rounded-t-3xl md:rounded-xl px-6 py-8 md:py-10 max-w-3xl w-full mx-auto text-center border-t border-x md:border border-white/20 bg-gradient-to-b from-red-500 to-red-700" style={{
+            boxShadow: "0 -10px 40px 0 rgba(0,0,0,0.25), inset 0 2px 5px rgba(255,255,255,0.3)"
           }}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold  mb-2">
-              Chalks<span className="text-red-600 font-black">n</span>board Delivered <span className="font-black">Brilliance</span> - Recent Work
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 drop-shadow-md">
+              Chalks<span className="text-yellow-300 font-black">n</span>board Delivered <span className="font-black">Brilliance</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl  font-medium">
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white/90">
               Blending Innovation & Execution Seamlessly
             </p>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   )

@@ -9,7 +9,7 @@ export default function AIBot() {
     {
       id: 1,
       type: "bot",
-      content: "Hello! I'm your AI assistant powered by Chalksnboard. What's your name?",
+      content: "Hi there! I'm from the Chalksnboard support team. How can I help you today? What's your name?",
       timestamp: new Date()
     }
   ])
@@ -56,9 +56,9 @@ export default function AIBot() {
       mission: "To help businesses grow through strategic, data-driven marketing solutions",
       values: ["Ethical Practices", "Results-Driven", "Innovation", "Client-Centric"],
       team: {
-        ceo: "Nikhil Sharma - Founder & CEO with 5+ years experience",
-        cmo: "Priya Agarwal - Chief Marketing Officer, AI marketing expert",
-        cto: "Rahul Gupta - Chief Technology Officer, AI & automation specialist"
+        ceo: "Vasudev Bansal - Founder & CEO, strategic marketing visionary",
+        cmo: "Priya Agarwal - Chief Marketing Officer, digital marketing expert",
+        cto: "Rahul Gupta - Chief Technology Officer, automation specialist"
       }
     },
     services: {
@@ -288,7 +288,7 @@ Each service is tailored to your specific needs and goals. Which service interes
     
     // Company information (lower priority)
     if (input.includes("company") || input.includes("chalksnboard")) {
-      return `Chalksnboard is a marketing agency, founded in 2020. We have 5+ years of experience, completed 100+ projects, served 100+ clients across India. Our mission is to help businesses grow through strategic, data-driven marketing solutions. We combine cutting-edge AI technology with human creativity to deliver exceptional results.`
+      return `Chalksnboard is a marketing agency, founded in 2020. We have 5+ years of experience, completed 100+ projects, served 100+ clients across India. Our mission is to help businesses grow through strategic, data-driven marketing solutions. We combine cutting-edge technology with human creativity to deliver exceptional results.`
     }
     
     // Specific service details for other services
@@ -504,16 +504,15 @@ Each service is tailored to your specific needs and goals. Which service interes
 
   return (
     <>
-             {/* AI Bot Toggle Button */}
+       {/* Live Support Toggle Button */}
        <div className="fixed bottom-6 right-6 z-[60]">
          <button
            onClick={() => setIsOpen(!isOpen)}
-           className="group relative bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl flex items-center justify-center transition-all duration-500 hover:scale-110 hover:shadow-purple-500/25"
-           aria-label="Open AI Chat"
+           className="group relative bg-zinc-900 dark:bg-zinc-800 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 magnetic-target border border-zinc-700 hover:border-red-500 z-50 overflow-hidden"
+           aria-label="Open Live Chat"
          >
           {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-2xl opacity-50 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           
                      {/* Icon */}
            <div className="relative z-10">
@@ -521,19 +520,14 @@ Each service is tailored to your specific needs and goals. Which service interes
                <X className="w-5 h-5 sm:w-6 sm:h-6" />
              ) : (
                <div className="relative">
-                 <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                 <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-ping"></div>
-                 <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
+                 <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
+                 <span className="absolute -top-1 -right-1 flex h-3 w-3 sm:h-4 sm:w-4 z-20">
+                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                   <span className="relative inline-flex rounded-full h-3 w-3 sm:h-4 sm:w-4 bg-red-500 border-2 border-zinc-900"></span>
+                 </span>
                </div>
              )}
            </div>
-
-          {/* Floating particles */}
-          <div className="absolute inset-0 overflow-hidden rounded-2xl">
-            <div className="absolute top-2 left-2 w-1 h-1 bg-white rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-            <div className="absolute top-3 right-3 w-1 h-1 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-            <div className="absolute bottom-2 left-3 w-1 h-1 bg-white rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-          </div>
         </button>
       </div>
 
@@ -547,49 +541,39 @@ Each service is tailored to your specific needs and goals. Which service interes
              <div className="absolute inset-0 bg-white/10 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-white/20 shadow-2xl"></div>
              
              {/* Gradient overlay */}
-             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-cyan-500/10 rounded-2xl sm:rounded-3xl"></div>
+             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-zinc-500/10 to-cyan-500/10 rounded-2xl sm:rounded-3xl"></div>
             
             {/* Main content */}
             <div className="relative w-full h-full flex flex-col">
-                             {/* Header */}
-               <div className="relative p-3 sm:p-4 rounded-t-2xl sm:rounded-t-3xl">
-                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-t-2xl sm:rounded-t-3xl"></div>
-                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-t-2xl sm:rounded-t-3xl opacity-80"></div>
+              {/* Header */}
+              <div className="p-3 sm:p-4 bg-zinc-900 border-b border-zinc-700/50 flex justify-between items-center rounded-t-2xl sm:rounded-t-3xl relative overflow-hidden shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent"></div>
+                <div className="flex items-center gap-2 sm:gap-3 relative z-10">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg shadow-red-500/20 p-1.5 sm:p-2 border border-red-400/30">
+                    <User className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-sm sm:text-lg">Live Support</h3>
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      <span className="text-green-400 text-[10px] sm:text-xs font-medium">Online now</span>
+                    </div>
+                  </div>
+                </div>
                 
-                <div className="relative flex items-center justify-between">
-                                     <div className="flex items-center space-x-2 sm:space-x-3">
-                     <div className="relative">
-                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center overflow-hidden">
-                         <img src="/images/download.png" alt="AI Assistant" className="w-4 h-4 sm:w-6 sm:h-6 object-contain" />
-                       </div>
-                       <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-400 rounded-full flex items-center justify-center">
-                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></div>
-                       </div>
-                     </div>
-                     <div>
-                       <h3 className="font-bold text-white text-sm sm:text-lg">AI Assistant</h3>
-                       <p className="text-purple-100 text-xs">Powered by Chalksnboard</p>
-                       <div className="text-purple-100 text-xs flex items-center">
-                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full mr-1 sm:mr-2 animate-pulse"></div>
-                         Online
-                       </div>
-                     </div>
-                   </div>
-                  
-                                     <div className="flex items-center space-x-1 sm:space-x-2">
-                     <button
-                       onClick={() => setIsMinimized(!isMinimized)}
-                       className="text-white/80 hover:text-white transition-colors p-1 text-xs font-medium"
-                     >
-                       {isMinimized ? "-" : "-"}
-                     </button>
-                     <button
-                       onClick={() => setIsOpen(false)}
-                       className="text-white/80 hover:text-white transition-colors p-1 text-xs font-medium"
-                     >
-                       x
-                     </button>
-                   </div>
+                <div className="flex items-center space-x-1 sm:space-x-2 relative z-10">
+                  <button
+                    onClick={() => setIsMinimized(!isMinimized)}
+                    className="text-white/80 hover:text-white transition-colors p-1 text-xs font-medium"
+                  >
+                    {isMinimized ? "+" : "-"}
+                  </button>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="text-white/80 hover:text-white transition-colors p-1 text-xs font-medium"
+                  >
+                    x
+                  </button>
                 </div>
               </div>
 
@@ -605,13 +589,13 @@ Each service is tailored to your specific needs and goals. Which service interes
                                                  <div
                            className={`max-w-[85%] sm:max-w-xs lg:max-w-md px-3 py-2 sm:px-4 sm:py-3 rounded-xl sm:rounded-2xl ${
                              message.type === "user"
-                               ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg"
+                               ? "bg-gradient-to-r from-purple-600 to-zinc-600 text-white shadow-lg"
                                : "bg-white/80 backdrop-blur-sm text-gray-800 border border-white/20 shadow-lg"
                            }`}
                          >
                                                      <div className="flex items-start space-x-1.5 sm:space-x-2">
                              {message.type === "bot" && (
-                               <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                               <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-zinc-400 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                                  <img src="/images/download.png" alt="AI Assistant" className="w-2.5 h-2.5 sm:w-3 sm:h-3 object-contain" />
                                </div>
                              )}
@@ -622,7 +606,7 @@ Each service is tailored to your specific needs and goals. Which service interes
                                </p>
                              </div>
                              {message.type === "user" && (
-                               <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0">
+                               <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-zinc-400 rounded-full flex items-center justify-center flex-shrink-0">
                                  <User className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                                </div>
                              )}
@@ -635,12 +619,12 @@ Each service is tailored to your specific needs and goals. Which service interes
                        <div className="flex justify-start">
                          <div className="bg-white/80 backdrop-blur-sm text-gray-800 border border-white/20 rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-lg">
                            <div className="flex items-center space-x-2 sm:space-x-3">
-                             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex items-center justify-center overflow-hidden">
+                             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-zinc-400 rounded-full flex items-center justify-center overflow-hidden">
                                <img src="/images/download.png" alt="AI Assistant" className="w-2.5 h-2.5 sm:w-3 sm:h-3 object-contain" />
                              </div>
                              <div className="flex space-x-1">
                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full animate-bounce"></div>
-                               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                              </div>
                            </div>
@@ -653,7 +637,7 @@ Each service is tailored to your specific needs and goals. Which service interes
 
                                      {/* Quick Replies */}
                    {messages.length === 1 && conversationStep >= 4 && (
-                     <div className="p-3 sm:p-4 bg-gradient-to-r from-purple-50/50 to-blue-50/50 backdrop-blur-sm border-t border-white/20">
+                     <div className="p-3 sm:p-4 bg-gradient-to-r from-purple-50/50 to-zinc-50/50 backdrop-blur-sm border-t border-white/20">
                        <p className="text-xs text-gray-600 mb-2 sm:mb-3 font-medium">Quick replies:</p>
                        <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                                                  {quickReplies.map((reply) => (
@@ -684,14 +668,14 @@ Each service is tailored to your specific needs and goals. Which service interes
                            className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-xs sm:text-sm placeholder-gray-500 shadow-lg"
                            disabled={isTyping}
                          />
-                         <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2">
+                         <div className="absolute right-2 sm:right-3 top-1/2 transform -tranzinc-y-1/2">
                            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-purple-400" />
                          </div>
                        </div>
                                              <button
                          onClick={handleSendMessage}
                          disabled={!inputValue.trim() || isTyping}
-                         className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-2 sm:p-3 rounded-xl sm:rounded-2xl hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center"
+                         className="bg-gradient-to-r from-purple-600 to-zinc-600 text-white p-2 sm:p-3 rounded-xl sm:rounded-2xl hover:from-purple-700 hover:to-zinc-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center"
                        >
                          <Send className="w-3 h-3 sm:w-4 sm:h-4" />
                        </button>

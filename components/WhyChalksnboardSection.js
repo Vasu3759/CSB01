@@ -16,9 +16,9 @@ export default function WhyChalksnboardSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Hot Air Balloon Image */}
           <div className="relative">
-            <div className="w-full h-64 lg:h-96 bg-gradient-to-b from-orange-200 to-blue-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
+            <div className="w-full h-64 lg:h-96 bg-gradient-to-b from-orange-200 to-zinc-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
               {/* Sky background with clouds */}
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-300 via-orange-200 to-blue-400"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-zinc-300 via-orange-200 to-zinc-400"></div>
 
               {/* Hot air balloon */}
               <div className="relative z-10 text-center">
@@ -46,7 +46,7 @@ export default function WhyChalksnboardSection() {
           {/* Content */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Chalksnboard?</h2>
-            <h3 className="text-xl lg:text-2xl font-semibold text-gray-700 mb-6">The AI Marketing Agency</h3>
+            <h3 className="text-xl lg:text-2xl font-semibold text-gray-700 mb-6">Your Dedicated Marketing Partner</h3>
            
 
             <div className="bg-white rounded-lg p-4 mb-4 flex items-center space-x-4 shadow-sm">

@@ -10,13 +10,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:from-pink-500 hover:to-blue-500 hover:shadow-xl",
+          "bg-gradient-to-r from-zinc-500 via-purple-500 to-pink-500 text-white hover:from-pink-500 hover:to-zinc-500 hover:shadow-xl",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 text-white hover:from-purple-400 hover:to-green-400 hover:shadow-lg",
+          "bg-gradient-to-r from-green-400 via-zinc-400 to-purple-400 text-white hover:from-purple-400 hover:to-green-400 hover:shadow-lg",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

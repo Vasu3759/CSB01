@@ -21,7 +21,7 @@ export default function MagazineStatsSection() {
       .toString()
       .split("")
       .map((digit, index) => (
-        <span key={index} className="inline-block bg-blue-500 text-white px-2 py-1 mx-0.5 rounded text-sm font-bold">
+        <span key={index} className="inline-block bg-zinc-500 text-white px-2 py-1 mx-0.5 rounded text-sm font-bold">
           {digit}
         </span>
       ))

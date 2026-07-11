@@ -13,9 +13,6 @@ const nextConfig = {
     unoptimized: true,
   },
   // Ensure proper static generation
-  experimental: {
-    appDir: true,
-  },
 }
 
 export default nextConfig

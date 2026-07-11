@@ -53,7 +53,7 @@ const comboPlans = [
     landingPage: "No",
     leadMgmt: "Yes",
     label: "Plan A",
-    color: "from-blue-500 to-blue-600",
+    color: "from-zinc-500 to-zinc-600",
   },
   {
     id: "b",
@@ -137,7 +137,7 @@ const serviceDetails = [
     deliverables: "Deliverables in Social Media Management",
     deliverys: "SM Post | Reels and Videos | Content Writing",
     icon: "📱",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-zinc-500 to-cyan-500",
   },
   {
     id: "s3",
@@ -260,7 +260,7 @@ export default function FreeConsultationPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-900">
       {/* Import the existing Header */}
       <Header />
 
@@ -299,7 +299,7 @@ export default function FreeConsultationPage() {
               className="w-full bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-4 rounded-xl text-lg focus:ring-2 focus:ring-red-500 focus:border-transparent appearance-none cursor-pointer"
             >
               {orgTypes.map((type) => (
-                <option key={type} value={type} className="bg-slate-800 text-white">
+                <option key={type} value={type} className="bg-zinc-800 text-white">
                   {type}
                 </option>
               ))}
@@ -326,7 +326,7 @@ export default function FreeConsultationPage() {
                     <span className="text-2xl">{service.icon}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <div className="text-3xl font-bold text-red-400 mb-4">₹{service.cost.toLocaleString()}</div>
+                  <div className="text-3xl font-bold text-red-400 mb-4">₹{service.cost.toLocaleString('en-IN')}</div>
                 </div>
 
                 {/* Features */}
@@ -373,7 +373,7 @@ export default function FreeConsultationPage() {
                 } ${plan.popular ? "ring-2 ring-yellow-400" : ""}`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -tranzinc-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-4 py-1 rounded-full text-sm font-bold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
@@ -388,9 +388,9 @@ export default function FreeConsultationPage() {
                     <Target className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.label}</h3>
-                  <div className="text-sm text-white/60 mb-2">Ads Budget: ₹{plan.adsBudget.toLocaleString()}</div>
-                  <div className="text-sm text-white/60 mb-4">Agency Fee: ₹{plan.agency.toLocaleString()}</div>
-                  <div className="text-4xl font-bold text-red-400">₹{plan.total.toLocaleString()}</div>
+                  <div className="text-sm text-white/60 mb-2">Ads Budget: ₹{plan.adsBudget.toLocaleString('en-IN')}</div>
+                  <div className="text-sm text-white/60 mb-4">Agency Fee: ₹{plan.agency.toLocaleString('en-IN')}</div>
+                  <div className="text-4xl font-bold text-red-400">₹{plan.total.toLocaleString('en-IN')}</div>
                   <div className="text-white/60 text-sm">/Month</div>
                 </div>
 
@@ -445,7 +445,7 @@ export default function FreeConsultationPage() {
                 } ${plan.popular ? "ring-2 ring-yellow-400" : ""}`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -tranzinc-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-4 py-1 rounded-full text-sm font-bold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
                       Recommended
@@ -491,7 +491,7 @@ export default function FreeConsultationPage() {
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">Your Selection Summary</h3>
             <div className="text-center">
-              <div className="text-5xl font-bold text-red-400 mb-2">₹{totalPrice.toLocaleString()}</div>
+              <div className="text-5xl font-bold text-red-400 mb-2">₹{totalPrice.toLocaleString('en-IN')}</div>
               <div className="text-white/60 text-lg mb-8">/Month Total Investment</div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -551,7 +551,7 @@ export default function FreeConsultationPage() {
                 })}
               </ul>
               <div className="font-semibold text-gray-700 mb-1">Total Cost:</div>
-              <div className="mb-4 text-red-500 font-bold text-lg">₹{totalPrice.toLocaleString()} / Month</div>
+              <div className="mb-4 text-red-500 font-bold text-lg">₹{totalPrice.toLocaleString('en-IN')} / Month</div>
             </div>
             {submitted ? (
               <div className="text-green-600 font-bold text-center py-8">Thank you! We will contact you soon.</div>
@@ -616,7 +616,7 @@ export default function FreeConsultationPage() {
                       </label>
                       <p className="text-gray-500 text-xs leading-relaxed">
                         Message and data rates may apply. You can opt out at any time by replying STOP.{" "}
-                        <a href="/privacy-policy" className="text-blue-600 hover:text-blue-700 hover:underline">
+                        <a href="/privacy-policy" className="text-zinc-600 hover:text-zinc-700 hover:underline">
                           Privacy Policy
                         </a>
                       </p>

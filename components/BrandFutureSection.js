@@ -2,9 +2,9 @@ import { Monitor, Radio, Target } from "lucide-react"
 
 export default function BrandFutureSection() {
   return (
-    <section className="bg-gray-100 py-16 lg:py-20">
+    <section className="bg-gray-100 dark:bg-background py-16 lg:py-20 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-6 text-center">
-        <h2 className="text-3xl lg:text-4xl xl:text-6xl font-bold text-gray-900 mb-12 lg:mb-16 leading-tight">
+        <h2 className="text-3xl lg:text-4xl xl:text-6xl font-bold text-gray-900 dark:text-foreground mb-12 lg:mb-16 leading-tight">
           Shaping The <span className="font-black">Future</span> Of Your Brand,{" "}
           <span className="font-black">Today.</span>
         </h2>

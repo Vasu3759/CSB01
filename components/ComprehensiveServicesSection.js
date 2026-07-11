@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Instagram, BookOpen, Megaphone, Radio, Target, Search, Zap } from "lucide-react"
+import { BookOpen, Megaphone, Radio, Target, Search, Zap } from "lucide-react"
 
 export default function ComprehensiveServicesSection() {
   const [activeService, setActiveService] = useState(null)
@@ -16,9 +16,9 @@ export default function ComprehensiveServicesSection() {
   }
 
   return (
-    <section className="bg-white py-16 lg:py-20">
+    <section className="bg-white dark:bg-background py-16 lg:py-20 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-6">
-        <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-center mb-12 lg:mb-16 leading-tight">
+        <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-foreground text-center mb-12 lg:mb-16 leading-tight">
           Shaping The <span className="font-black">Future</span> Of Your Brand,{" "}
           <span className="font-black">Today</span>
         </h2>
@@ -35,9 +35,9 @@ export default function ComprehensiveServicesSection() {
             { src: "/Rectangle4.png", text: "Review & Reputation Management", description: "We provide 360-degree review and reputation management solutions for ed-techs, ensuring a strong and credible digital presence. From monitoring feedback and responding to reviews to building trust and enhancing brand perception, our strategies help maintain a positive reputation across online platforms." },
             { src: "/Rectangle4.png", text: "Dynamic Website Design", description: "We create 360-degree dynamic website solutions for ed-techs, ensuring a seamless, engaging, and scalable online presence. From interactive design and responsive layouts to smooth functionality and user-friendly experiences, our websites are built to captivate and convert." },
           ].map((service, idx) => (
-            <div key={service.text + idx} className="bg-white rounded-xl shadow p-6 border border-gray-100 hover:shadow-lg transition flex flex-col items-center text-center">
+            <div key={service.text + idx} className="bg-white dark:bg-card rounded-xl shadow p-6 border border-gray-100 dark:border-border hover:shadow-lg transition flex flex-col items-center text-center">
               <h3 className="text-lg font-bold text-red-600 mb-2">{service.text}</h3>
-              <p className="text-gray-700 text-sm">{service.description}</p>
+              <p className="text-gray-700 dark:text-muted-foreground text-sm">{service.description}</p>
             </div>
           ))}
         </div>
@@ -45,18 +45,18 @@ export default function ComprehensiveServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Paid Ads */}
           <div
-            className={`space-y-4 p-4 rounded-lg cursor-pointer transition-all ${activeService === "paid" ? "bg-red-50 border-2 border-red-200" : "hover:bg-gray-50"}`}
+            className={`space-y-4 p-4 rounded-lg cursor-pointer transition-all ${activeService === "paid" ? "bg-red-50 dark:bg-red-950/30 border-2 border-red-200 dark:border-red-900/50" : "hover:bg-gray-50 dark:hover:bg-zinc-900/50"}`}
             onClick={() => handleServiceClick("paid")}
           >
             <div className="flex items-center space-x-2 text-red-500">
               <Target className="w-6 h-6" />
               <h3 className="text-lg font-bold">Paid Ads</h3>
             </div>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-600 dark:text-muted-foreground">
               <li>• PPC & Paid Ads</li>
               <li>• Google Ads</li>
             </ul>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 dark:text-muted-foreground text-sm">
               Our print advertisement ensures seductive ad campaigns with enchanting creative graphic illustrations that
               tell the best possible story about your brand.
             </p>
@@ -73,14 +73,14 @@ export default function ComprehensiveServicesSection() {
 
           {/* Organic Search */}
           <div
-            className={`space-y-4 p-4 rounded-lg cursor-pointer transition-all ${activeService === "seo" ? "bg-red-50 border-2 border-red-200" : "hover:bg-gray-50"}`}
+            className={`space-y-4 p-4 rounded-lg cursor-pointer transition-all ${activeService === "seo" ? "bg-red-50 dark:bg-red-950/30 border-2 border-red-200 dark:border-red-900/50" : "hover:bg-gray-50 dark:hover:bg-zinc-900/50"}`}
             onClick={() => handleServiceClick("seo")}
           >
             <div className="flex items-center space-x-2 text-red-500">
               <Search className="w-6 h-6" />
               <h3 className="text-lg font-bold">Organic Search</h3>
             </div>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-600 dark:text-muted-foreground">
               <li>• SEO Services</li>
               <li>• SEO Audit</li>
               <li>• Speed Optimization</li>
@@ -98,14 +98,14 @@ export default function ComprehensiveServicesSection() {
 
           {/* Integrated Marketing */}
           <div
-            className={`space-y-4 p-4 rounded-lg cursor-pointer transition-all ${activeService === "integrated" ? "bg-red-50 border-2 border-red-200" : "hover:bg-gray-50"}`}
+            className={`space-y-4 p-4 rounded-lg cursor-pointer transition-all ${activeService === "integrated" ? "bg-red-50 dark:bg-red-950/30 border-2 border-red-200 dark:border-red-900/50" : "hover:bg-gray-50 dark:hover:bg-zinc-900/50"}`}
             onClick={() => handleServiceClick("integrated")}
           >
             <div className="flex items-center space-x-2 text-red-500">
               <Zap className="w-6 h-6" />
               <h3 className="text-lg font-bold">Integrated Marketing</h3>
             </div>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-600 dark:text-muted-foreground">
               <li>• Outdoor Marketing</li>
             </ul>
             {activeService === "integrated" && (
@@ -123,10 +123,10 @@ export default function ComprehensiveServicesSection() {
 
           {/* Digital Strategy with Image */}
           <div className="space-y-4">
-            <div className="bg-gray-900 rounded-lg p-6 text-white relative overflow-hidden cursor-pointer hover:bg-gray-800 transition-colors">
+            <div className="bg-gray-900 dark:bg-card border dark:border-border rounded-lg p-6 text-white dark:text-foreground relative overflow-hidden cursor-pointer hover:bg-gray-800 dark:hover:bg-zinc-900/80 transition-colors">
               <div className="absolute right-4 top-4 w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg opacity-20"></div>
               <h3 className="text-lg font-bold mb-4">Digital Strategy</h3>
-              <p className="text-sm mb-4">
+              <p className="text-sm mb-4 text-gray-300 dark:text-muted-foreground">
                 We combine data-driven insights with creative excellence to deliver strategies that meet your brand
                 awareness needs and lead generation and brand building.
               </p>

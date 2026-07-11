@@ -48,7 +48,7 @@ export default function EmailMarketingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20">
+      <section className="bg-gradient-to-br from-zinc-600 to-purple-700 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <Mail className="w-10 h-10" />
@@ -58,10 +58,10 @@ export default function EmailMarketingPage() {
             Drive engagement and conversions with personalized email campaigns that deliver results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-zinc-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get Free Consultation
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zinc-600 transition-colors">
               View Portfolio
             </button>
           </div>
@@ -86,7 +86,7 @@ export default function EmailMarketingPage() {
                 }}
                 className={`py-4 px-2 border-b-2 font-medium capitalize whitespace-nowrap ${
                   activeTab === tab
-                    ? "border-blue-600 text-blue-600"
+                    ? "border-zinc-600 text-zinc-600"
                     : "border-transparent text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -117,9 +117,9 @@ export default function EmailMarketingPage() {
                   ))}
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+              <div className="bg-gradient-to-br from-zinc-50 to-purple-50 p-8 rounded-2xl">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                  <div className="text-4xl font-bold text-zinc-600 mb-2">95%</div>
                   <div className="text-gray-600 mb-4">Average Open Rate</div>
                   <div className="text-4xl font-bold text-purple-600 mb-2">300%</div>
                   <div className="text-gray-600">ROI Increase</div>
@@ -137,12 +137,12 @@ export default function EmailMarketingPage() {
                     key={index}
                     className={`relative p-8 rounded-2xl ${
                       pkg.popular
-                        ? "bg-gradient-to-br from-blue-600 to-purple-600 text-white"
+                        ? "bg-gradient-to-br from-zinc-600 to-purple-600 text-white"
                         : "bg-white border-2 border-gray-200"
                     }`}
                   >
                     {pkg.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="absolute -top-4 left-1/2 transform -tranzinc-x-1/2">
                         <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
                           Most Popular
                         </span>
@@ -164,8 +164,8 @@ export default function EmailMarketingPage() {
                     <button
                       className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                         pkg.popular
-                          ? "bg-white text-blue-600 hover:bg-gray-100"
-                          : "bg-blue-600 text-white hover:bg-blue-700"
+                          ? "bg-white text-zinc-600 hover:bg-gray-100"
+                          : "bg-zinc-600 text-white hover:bg-zinc-700"
                       }`}
                     >
                       Get Started

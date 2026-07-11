@@ -86,4 +86,4 @@ const config = {
   plugins: [require("tailwindcss-animate")],
 };
 
-module.exports = config; 
+module.exports = config;
