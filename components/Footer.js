@@ -2,10 +2,9 @@
 
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
-import { Phone, Facebook, Instagram, Youtube, Twitter } from "lucide-react"
+import { Phone } from "lucide-react"
+import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6"
 import { FaWhatsapp } from "react-icons/fa"
-import AIBot from "./AIBot"
-
 export default function Footer() {
   const router = useRouter()
   const pathname = usePathname()
@@ -43,15 +42,12 @@ export default function Footer() {
 
   return (
     <>
-      {/* AI Bot Component */}
-      <AIBot />
-
       {/* Floating WhatsApp Chat Icon (global) */}
       <a
         href="https://wa.me/918860878346"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center transition-colors duration-200"
+        className="fixed bottom-6 sm:bottom-8 right-4 sm:right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center transition-colors duration-200 hover:scale-110"
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp className="w-7 h-7" />
@@ -69,20 +65,20 @@ export default function Footer() {
               </div>
               <p className="text-gray-400 text-sm">Digital Marketing Agency with a proven track record since 2020</p>
               <div className="flex space-x-4 mt-6">
-                <Facebook
-                  className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors hover:scale-110"
+                <FaFacebook
+                  className="w-5 h-5 text-[#1877F2] hover:opacity-80 cursor-pointer transition-all hover:scale-110"
                   onClick={() => openSocialMedia("facebook")}
                 />
-                <Instagram
-                  className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors hover:scale-110"
+                <FaInstagram
+                  className="w-5 h-5 text-[#E4405F] hover:opacity-80 cursor-pointer transition-all hover:scale-110"
                   onClick={() => openSocialMedia("instagram")}
                 />
-                <Youtube
-                  className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors hover:scale-110"
+                <FaYoutube
+                  className="w-5 h-5 text-[#FF0000] hover:opacity-80 cursor-pointer transition-all hover:scale-110"
                   onClick={() => openSocialMedia("youtube")}
                 />
-                <Twitter
-                  className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors hover:scale-110"
+                <FaXTwitter
+                  className="w-5 h-5 text-white hover:opacity-80 cursor-pointer transition-all hover:scale-110"
                   onClick={() => openSocialMedia("twitter")}
                 />
               </div>
@@ -158,16 +154,16 @@ export default function Footer() {
                   </button>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-white transition-colors flex items-center group">
+                  <button onClick={(e) => { e.preventDefault(); alert('Blog coming soon!'); }} className="hover:text-white transition-colors flex items-center group text-left">
                     <span className="w-1 h-1 bg-red-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Blog
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-white transition-colors flex items-center group">
+                  <button onClick={(e) => { e.preventDefault(); alert('Case Studies coming soon!'); }} className="hover:text-white transition-colors flex items-center group text-left">
                     <span className="w-1 h-1 bg-red-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Case Studies
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -175,22 +171,22 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold mb-4 text-red-500">Contact</h4>
               <div className="space-y-3 text-gray-400 text-sm">
-                <div className="flex items-center space-x-3 group">
+                <a href="tel:+918860878346" className="flex items-center space-x-3 group hover:text-white transition-colors cursor-pointer">
                   <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-red-500 transition-colors">
                     <Phone className="w-4 h-4 text-white" />
                   </div>
-                  <a href="tel:+918860878346" className="hover:text-white transition-colors">
+                  <span>
                     +91 8860878346
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 group mt-2">
+                  </span>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@chalksnboard.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group mt-2 hover:text-white transition-colors cursor-pointer">
                   <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-red-500 transition-colors">
                     <span className="text-white font-bold">@</span>
                   </div>
-                  <a href="mailto:info@chalksnboard.com" className="hover:text-white transition-colors">
+                  <span>
                     info@chalksnboard.com
-                  </a>
-                </div>
+                  </span>
+                </a>
               </div>
               <button
                 onClick={() => scrollToSection("hero")}

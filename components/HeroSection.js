@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Facebook, Instagram, Youtube, Twitter, Linkedin, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import MagneticButton from "./ui/MagneticButton";
 
 export default function HeroSection() {
@@ -91,18 +92,18 @@ export default function HeroSection() {
           <div className="hero-socials flex items-center justify-center mt-12">
             <div className="flex items-center justify-center gap-4 sm:gap-6 px-6 py-3">
               {[
-                { icon: Facebook, href: "https://www.facebook.com/ChalksnBoard/" },
-                { icon: Linkedin, href: "https://www.linkedin.com/company/chalksnboard/" },
-                { icon: Instagram, href: "https://www.instagram.com/chalksnboard_official/" },
-                { icon: Youtube, href: "https://www.youtube.com/@chalksnboard" },
-                { icon: Twitter, href: "https://x.com/chalksnboard" },
+                { icon: FaFacebook, href: "https://www.facebook.com/ChalksnBoard/", color: "text-[#1877F2] hover:bg-[#1877F2]/10 border-[#1877F2]/30" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/company/chalksnboard/", color: "text-[#0A66C2] hover:bg-[#0A66C2]/10 border-[#0A66C2]/30" },
+                { icon: FaInstagram, href: "https://www.instagram.com/chalksnboard_official/", color: "text-[#E4405F] hover:bg-[#E4405F]/10 border-[#E4405F]/30" },
+                { icon: FaYoutube, href: "https://www.youtube.com/@chalksnboard", color: "text-[#FF0000] hover:bg-[#FF0000]/10 border-[#FF0000]/30" },
+                { icon: FaXTwitter, href: "https://x.com/chalksnboard", color: "text-foreground hover:bg-foreground/10 border-foreground/30" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 sm:p-3 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-tranzinc-y-1 shadow-[0_0_10px_rgba(239,68,68,0.15)] hover:shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                  className={`p-2 sm:p-3 rounded-full bg-background border transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-sm ${social.color}`}
                 >
                   <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>

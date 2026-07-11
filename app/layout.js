@@ -2,6 +2,7 @@ import './globals.css'
 import HeaderClient from '../components/HeaderClient'
 import Footer from '../components/Footer'
 import CustomCursor from '../components/ui/CustomCursor'
+import { ThemeProvider } from '../components/theme-provider'
 
 export const metadata = {
   title: {
@@ -130,23 +131,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body className="flex flex-col min-h-screen">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KZ48QTFV"
-            height="0" 
-            width="0" 
-            style={{display: 'none', visibility: 'hidden'}}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
-        
-        <CustomCursor />
-        <HeaderClient />
-        <main className="flex-grow flex flex-col min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {/* Google Tag Manager (noscript) */}
+          <noscript>
+            <iframe 
+              src="https://www.googletagmanager.com/ns.html?id=GTM-KZ48QTFV"
+              height="0" 
+              width="0" 
+              style={{display: 'none', visibility: 'hidden'}}
+            />
+          </noscript>
+          {/* End Google Tag Manager (noscript) */}
+          
+          <CustomCursor />
+          <HeaderClient />
+          <main className="flex-grow flex flex-col min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
